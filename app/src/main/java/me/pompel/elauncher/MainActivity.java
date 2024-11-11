@@ -465,7 +465,7 @@ public class MainActivity extends AppCompatActivity {
                     float xDiff = e2.getX() - e1.getX();
                     float yDiff = e2.getY() - e1.getY();
                     if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > 100 && Math.abs(velocityX) > 100) safeStartActivity((xDiff > 0)
-                            ? new Intent(canMakePhoneCall() ? Intent.ACTION_DIAL : MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
+                            ? new Intent(Settings.ACTION_SETTINGS)
                             : getDefaultBrowserIntent());
                     else if (Math.abs(yDiff) > 100 && Math.abs(velocityY) > 100) {
                         if (yDiff > 0)
